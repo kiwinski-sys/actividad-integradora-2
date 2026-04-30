@@ -42,3 +42,11 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - **Branch Management**: Merged `feature/productos` into `main` after completing development.
+- `config/database.php`: Updated the `Database` class constructor to dynamically support GitHub Codespaces by detecting the `CODESPACES` environment variable and adapting credentials.
+
+## [2026-04-30] - GitHub Codespaces Support
+
+### Added
+- `.devcontainer/devcontainer.json`: Configured the Codespace with port forwarding and VS Code PHP/SQL extensions.
+- `.devcontainer/docker-compose.yml`: Set up dual containers (App + Database) using MariaDB 10.5. Automatically mounts the local database script on initialization.
+- `.devcontainer/Dockerfile`: Created an environment based on `php:8.2-apache`, installing PDO extensions and enabling `mod_rewrite`.

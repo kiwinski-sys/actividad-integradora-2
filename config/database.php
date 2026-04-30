@@ -10,6 +10,14 @@ class Database {
     private $password = "";     // Ajustar según configuración local
     public $conn;
 
+    public function __construct() {
+        // Soporte dinámico para GitHub Codespaces / Docker
+        if (getenv('CODESPACES') == 'true') {
+            $this->host = "db";
+            $this->password = "root";
+        }
+    }
+
     public function getConnection() {
         $this->conn = null;
 

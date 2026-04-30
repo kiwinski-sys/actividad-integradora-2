@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    ports:
+      - "80:80"
+    environment:
+      - CODESPACES=true
+    depends_on:
+      - db
+    command: apache2-foreground
+
+  db:
+    image: mariadb:10.5
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: inventario_ventas
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # Initialize DB with the provided script
+      - ../database/script.sql:/docker-entrypoint-initdb.d/script.sql
+
+volumes:
+  db_data:
