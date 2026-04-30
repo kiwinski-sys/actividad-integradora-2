@@ -38,3 +38,7 @@ All notable changes to this project will be documented in this file.
 - `views/productos/index.php`: Built the product listing table with status badges and action buttons.
 - `views/productos/create.php` & `edit.php`: Developed forms for creating and updating products with validation feedback.
 - `index.php`: Updated to serve as the main application router, handling URL parameters for CRUD actions.
+- `README.md`: Completed professional documentation including installation steps and system description.
+
+### Changed
+- **Branch Management**: Merged `feature/productos` into `main` after completing development.
