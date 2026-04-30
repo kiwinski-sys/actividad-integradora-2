@@ -34,3 +34,7 @@ All notable changes to this project will be documented in this file.
 - `config/database.php`: Implemented `Database` class using PDO for secure and flexible MySQL connections.
 - `models/Producto.php`: Created `Producto` class with full CRUD logic (Create, Read, Update, Delete) using prepared statements for security.
 - `controllers/ProductoController.php`: Implemented `ProductoController` to manage traffic between the Model and Views, including validation logic (e.g., non-negative stock, positive price).
+- `views/layout/header.php` & `footer.php`: Created common UI layouts using Bootstrap 5 for a modern, responsive design.
+- `views/productos/index.php`: Built the product listing table with status badges and action buttons.
+- `views/productos/create.php` & `edit.php`: Developed forms for creating and updating products with validation feedback.
+- `index.php`: Updated to serve as the main application router, handling URL parameters for CRUD actions.
