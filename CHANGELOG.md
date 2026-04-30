@@ -26,3 +26,8 @@ All notable changes to this project will be documented in this file.
     - Initialized a new Git repository.
     - Renamed default branch to `main`.
     - Created `feature/productos` branch and switched to it for development.
+
+## [2026-04-30] - Database Setup
+
+### Added
+- `database/script.sql`: Added SQL script to create the `inventario_ventas` database and `productos` table with validation-ready fields (`nombre`, `precio`, `stock`). Added sample data.
