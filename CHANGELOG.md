@@ -33,3 +33,4 @@ All notable changes to this project will be documented in this file.
 - `database/script.sql`: Added SQL script to create the `inventario_ventas` database and `productos` table with validation-ready fields (`nombre`, `precio`, `stock`). Added sample data.
 - `config/database.php`: Implemented `Database` class using PDO for secure and flexible MySQL connections.
 - `models/Producto.php`: Created `Producto` class with full CRUD logic (Create, Read, Update, Delete) using prepared statements for security.
+- `controllers/ProductoController.php`: Implemented `ProductoController` to manage traffic between the Model and Views, including validation logic (e.g., non-negative stock, positive price).
