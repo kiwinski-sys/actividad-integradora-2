@@ -1,6 +1,6 @@
 <?php
-require_once '../config/database.php';
-require_once '../models/Producto.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../models/Producto.php';
 
 class ProductoController {
     private $db;
@@ -16,7 +16,7 @@ class ProductoController {
     public function index() {
         $stmt = $this->producto->read();
         $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        include '../views/productos/index.php';
+        include __DIR__ . '/../views/productos/index.php';
     }
 
     // Mostrar formulario de creación
@@ -33,14 +33,14 @@ class ProductoController {
                     header("Location: index.php?action=index&msg=success");
                 } else {
                     $error = "No se pudo crear el producto.";
-                    include '../views/productos/create.php';
+                    include __DIR__ . '/../views/productos/create.php';
                 }
             } else {
                 $error = "Por favor, complete todos los campos correctamente.";
-                include '../views/productos/create.php';
+                include __DIR__ . '/../views/productos/create.php';
             }
         } else {
-            include '../views/productos/create.php';
+            include __DIR__ . '/../views/productos/create.php';
         }
     }
 
@@ -58,16 +58,16 @@ class ProductoController {
                     header("Location: index.php?action=index&msg=updated");
                 } else {
                     $error = "No se pudo actualizar el producto.";
-                    include '../views/productos/edit.php';
+                    include __DIR__ . '/../views/productos/edit.php';
                 }
             } else {
                 $error = "Datos inválidos.";
-                include '../views/productos/edit.php';
+                include __DIR__ . '/../views/productos/edit.php';
             }
         } else {
             $this->producto->id = $id;
             $this->producto->readOne();
-            include '../views/productos/edit.php';
+            include __DIR__ . '/../views/productos/edit.php';
         }
     }
 

@@ -1,4 +1,4 @@
-<?php include '../views/layout/header.php'; ?>
+<?php include __DIR__ . '/../layout/header.php'; ?>
 
 <div class="row">
     <div class="col-md-12">
@@ -63,4 +63,4 @@
     </div>
 </div>
 
-<?php include '../views/layout/footer.php'; ?>
+<?php include __DIR__ . '/../layout/footer.php'; ?>
