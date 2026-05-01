@@ -1,7 +1,7 @@
 FROM php:8.2-apache
 
 # Install MariaDB client and PDO extensions
-RUN apt-get update && apt-get install -y mariadb-client \
+RUN apt-get update && apt-get install -y mariadb-client git \
     && docker-php-ext-install pdo pdo_mysql
 
 # Enable Apache mod_rewrite
