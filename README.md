@@ -8,10 +8,18 @@ Este proyecto es un sistema web desarrollado en PHP que permite gestionar un inv
 - **Arquitectura MVC**: Separación clara entre Modelos, Vistas y Controladores.
 - **Diseño Responsivo**: Interfaz moderna construida con Bootstrap 5.
 
-## Requisitos
-- Servidor local (XAMPP, WAMP o Laragon) con PHP 7.4 o superior.
-- MySQL / MariaDB.
-- Git instalado.
+## Requisitos del Sistema
+
+### Requisitos de Servidor
+- **Servidor Web:** Apache o Nginx (recomendado mediante XAMPP, WAMP, Laragon, o Docker).
+- **Lenguaje:** PHP 7.4 o superior (con extensión PDO habilitada para conexiones a base de datos).
+- **Base de Datos:** MySQL 5.7+ o MariaDB 10.3+.
+- **Herramientas Adicionales:** Git (para control de versiones).
+
+### Requisitos de Navegador
+- Se requiere un navegador moderno con soporte para HTML5, CSS3 y JavaScript.
+- **Soportados:** Google Chrome, Mozilla Firefox, Microsoft Edge o Safari (en sus versiones más recientes).
+- JavaScript debe estar habilitado para el correcto funcionamiento de los componentes interactivos de Bootstrap 5.
 
 ## Instalación
 1. Clona este repositorio en tu carpeta de servidor local (`htdocs` o `www`).
